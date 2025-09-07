@@ -1,0 +1,21 @@
+{
+  "name": "rupture-chat-app",
+  "version": "1.0.0",
+  "description": "Rupture - A WhatsApp-like chat application with React, React Native, and Supabase",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && cd backend && npm install && cd ../web && npm install && cd ../mobile && npm install",
+    "dev": "concurrently \"npm run backend\" \"npm run web\"",
+    "backend": "cd backend && npm run dev",
+    "web": "cd web && npm start",
+    "mobile": "cd mobile && npm start",
+    "build": "cd web && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["chat", "messaging", "react", "react-native", "supabase", "whatsapp"],
+  "author": "mrNorthernLight",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
