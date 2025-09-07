@@ -1,0 +1,154 @@
+{
+  "cars": {
+    "car1_bmw_m3": {
+      "brand": "BMW",
+      "model": "M3",
+      "year": 2020,
+      "engineType": "3.0L Twin Turbo I6",
+      "trim": "Competition",
+      "imageUrl": "https://storage.googleapis.com/boostlab-assets/cars/bmw-m3-2020.jpg",
+      "specifications": {
+        "horsepower": 503,
+        "torque": "479 lb-ft",
+        "transmission": "8-speed automatic",
+        "drivetrain": "RWD",
+        "weight": "3803 lbs",
+        "topSpeed": "180 mph",
+        "acceleration": "3.8s 0-60"
+      },
+      "categories": ["sports", "luxury", "performance"],
+      "popularMods": [
+        "turbo_upgrade",
+        "exhaust_system",
+        "suspension",
+        "intake"
+      ],
+      "createdAt": "2024-01-01T00:00:00Z"
+    },
+    "car2_honda_civic": {
+      "brand": "Honda",
+      "model": "Civic Type R",
+      "year": 2022,
+      "engineType": "2.0L Turbo I4",
+      "trim": "Limited Edition",
+      "imageUrl": "https://storage.googleapis.com/boostlab-assets/cars/honda-civic-type-r-2022.jpg",
+      "specifications": {
+        "horsepower": 315,
+        "torque": "310 lb-ft",
+        "transmission": "6-speed manual",
+        "drivetrain": "FWD",
+        "weight": "3117 lbs",
+        "topSpeed": "169 mph",
+        "acceleration": "5.0s 0-60"
+      },
+      "categories": ["sports", "compact", "performance"],
+      "popularMods": [
+        "cold_air_intake",
+        "exhaust_system",
+        "coilovers",
+        "turbo_upgrade"
+      ],
+      "createdAt": "2024-01-01T00:00:00Z"
+    },
+    "car3_toyota_supra": {
+      "brand": "Toyota",
+      "model": "Supra",
+      "year": 2023,
+      "engineType": "3.0L Twin Turbo I6",
+      "trim": "3.0 Premium",
+      "imageUrl": "https://storage.googleapis.com/boostlab-assets/cars/toyota-supra-2023.jpg",
+      "specifications": {
+        "horsepower": 382,
+        "torque": "368 lb-ft",
+        "transmission": "8-speed automatic",
+        "drivetrain": "RWD",
+        "weight": "3397 lbs",
+        "topSpeed": "155 mph",
+        "acceleration": "3.9s 0-60"
+      },
+      "categories": ["sports", "coupe", "performance"],
+      "popularMods": [
+        "turbo_upgrade",
+        "exhaust_system",
+        "suspension",
+        "body_kit"
+      ],
+      "createdAt": "2024-01-01T00:00:00Z"
+    },
+    "car4_nissan_gtr": {
+      "brand": "Nissan",
+      "model": "GT-R",
+      "year": 2021,
+      "engineType": "3.8L Twin Turbo V6",
+      "trim": "Premium",
+      "imageUrl": "https://storage.googleapis.com/boostlab-assets/cars/nissan-gtr-2021.jpg",
+      "specifications": {
+        "horsepower": 565,
+        "torque": "467 lb-ft",
+        "transmission": "6-speed dual-clutch",
+        "drivetrain": "AWD",
+        "weight": "3865 lbs",
+        "topSpeed": "196 mph",
+        "acceleration": "2.9s 0-60"
+      },
+      "categories": ["supercar", "performance", "awd"],
+      "popularMods": [
+        "turbo_upgrade",
+        "exhaust_system",
+        "intercooler",
+        "suspension"
+      ],
+      "createdAt": "2024-01-01T00:00:00Z"
+    },
+    "car5_ford_mustang": {
+      "brand": "Ford",
+      "model": "Mustang GT",
+      "year": 2022,
+      "engineType": "5.0L V8",
+      "trim": "Premium",
+      "imageUrl": "https://storage.googleapis.com/boostlab-assets/cars/ford-mustang-gt-2022.jpg",
+      "specifications": {
+        "horsepower": 450,
+        "torque": "410 lb-ft",
+        "transmission": "10-speed automatic",
+        "drivetrain": "RWD",
+        "weight": "3705 lbs",
+        "topSpeed": "163 mph",
+        "acceleration": "4.3s 0-60"
+      },
+      "categories": ["muscle", "sports", "american"],
+      "popularMods": [
+        "supercharger",
+        "exhaust_system",
+        "cold_air_intake",
+        "suspension"
+      ],
+      "createdAt": "2024-01-01T00:00:00Z"
+    },
+    "car6_subaru_wrx": {
+      "brand": "Subaru",
+      "model": "WRX STI",
+      "year": 2021,
+      "engineType": "2.5L Turbo H4",
+      "trim": "Limited",
+      "imageUrl": "https://storage.googleapis.com/boostlab-assets/cars/subaru-wrx-sti-2021.jpg",
+      "specifications": {
+        "horsepower": 310,
+        "torque": "290 lb-ft",
+        "transmission": "6-speed manual",
+        "drivetrain": "AWD",
+        "weight": "3391 lbs",
+        "topSpeed": "159 mph",
+        "acceleration": "5.2s 0-60"
+      },
+      "categories": ["rally", "awd", "performance"],
+      "popularMods": [
+        "turbo_upgrade",
+        "exhaust_system",
+        "coilovers",
+        "intercooler"
+      ],
+      "createdAt": "2024-01-01T00:00:00Z"
+    }
+  }
+}

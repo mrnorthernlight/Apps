@@ -1,0 +1,60 @@
+{
+  "name": "boostlab",
+  "version": "1.0.0",
+  "description": "Global Car Tuning Parts Webshop with Firebase Backend",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:web\" \"npm run dev:functions\"",
+    "dev:web": "cd web && npm run dev",
+    "dev:functions": "cd functions && npm run serve",
+    "build": "npm run build:web && npm run build:functions",
+    "build:web": "cd web && npm run build",
+    "build:functions": "cd functions && npm run build",
+    "deploy": "firebase deploy",
+    "deploy:hosting": "firebase deploy --only hosting",
+    "deploy:functions": "firebase deploy --only functions",
+    "deploy:firestore": "firebase deploy --only firestore",
+    "test": "npm run test:web && npm run test:functions",
+    "test:web": "cd web && npm test",
+    "test:functions": "cd functions && npm test",
+    "lint": "npm run lint:web && npm run lint:functions",
+    "lint:web": "cd web && npm run lint",
+    "lint:functions": "cd functions && npm run lint",
+    "setup": "npm run setup:web && npm run setup:functions && npm run setup:mobile",
+    "setup:web": "cd web && npm install",
+    "setup:functions": "cd functions && npm install",
+    "setup:mobile": "cd mobile && flutter pub get",
+    "firebase:init": "firebase init",
+    "firebase:emulators": "firebase emulators:start",
+    "seed:data": "node scripts/seed-firestore.js"
+  },
+  "keywords": [
+    "car-tuning",
+    "e-commerce",
+    "firebase",
+    "nextjs",
+    "flutter",
+    "3d-preview",
+    "ar",
+    "automotive",
+    "parts",
+    "webshop"
+  ],
+  "author": "BoostLab Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "firebase-tools": "^13.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrnorthernlight/Apps.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mrnorthernlight/Apps/issues"
+  },
+  "homepage": "https://github.com/mrnorthernlight/Apps#readme"
+}

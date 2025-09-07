@@ -1,0 +1,207 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function getUserRole() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role;
+    }
+    
+    function isUser() {
+      return isAuthenticated() && getUserRole() == 'user';
+    }
+    
+    function isVendor() {
+      return isAuthenticated() && getUserRole() == 'vendor';
+    }
+    
+    function isAdmin() {
+      return isAuthenticated() && getUserRole() == 'admin';
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    function isVendorOwner(vendorId) {
+      return isAuthenticated() && request.auth.uid == vendorId;
+    }
+    
+    // Users collection
+    match /users/{userId} {
+      // Users can read and write their own profile
+      allow read, write: if isOwner(userId);
+      
+      // Admins can read all users and update roles
+      allow read: if isAdmin();
+      allow update: if isAdmin() && 
+        (!('role' in request.resource.data) || 
+         request.resource.data.role in ['user', 'vendor', 'admin']);
+      
+      // Vendors can read basic user info for order processing
+      allow read: if isVendor() && 
+        resource.data.keys().hasOnly(['name', 'email']);
+    }
+    
+    // Cars collection - read-only for all authenticated users
+    match /cars/{carId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+    
+    // Parts collection
+    match /parts/{partId} {
+      // Anyone can read parts (for browsing)
+      allow read: if true;
+      
+      // Vendors can create and update their own parts
+      allow create: if isVendor() && 
+        request.resource.data.vendorId == request.auth.uid;
+      
+      allow update: if isVendor() && 
+        resource.data.vendorId == request.auth.uid &&
+        request.resource.data.vendorId == request.auth.uid;
+      
+      // Admins can manage all parts
+      allow write: if isAdmin();
+      
+      // Prevent deletion unless admin
+      allow delete: if isAdmin();
+    }
+    
+    // Reviews collection
+    match /reviews/{reviewId} {
+      // Anyone can read reviews
+      allow read: if true;
+      
+      // Users can create reviews for products they purchased
+      allow create: if isAuthenticated() && 
+        request.resource.data.userId == request.auth.uid &&
+        // TODO: Add check for verified purchase
+        request.resource.data.keys().hasAll(['userId', 'productId', 'rating', 'comment', 'timestamp']);
+      
+      // Users can update their own reviews
+      allow update: if isAuthenticated() && 
+        resource.data.userId == request.auth.uid &&
+        request.resource.data.userId == request.auth.uid;
+      
+      // Users can delete their own reviews, admins can delete any
+      allow delete: if (isAuthenticated() && resource.data.userId == request.auth.uid) || 
+        isAdmin();
+    }
+    
+    // Orders collection
+    match /orders/{orderId} {
+      // Users can read their own orders
+      allow read: if isAuthenticated() && resource.data.userId == request.auth.uid;
+      
+      // Users can create orders for themselves
+      allow create: if isAuthenticated() && 
+        request.resource.data.userId == request.auth.uid &&
+        request.resource.data.keys().hasAll(['userId', 'products', 'totalAmount', 'currency', 'status', 'timestamp']);
+      
+      // Only specific status updates allowed by users
+      allow update: if isAuthenticated() && 
+        resource.data.userId == request.auth.uid &&
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status']) &&
+        request.resource.data.status in ['cancelled'];
+      
+      // Vendors can read orders containing their products
+      allow read: if isVendor() && 
+        resource.data.products.hasAny([request.auth.uid]);
+      
+      // Vendors can update order status for their products
+      allow update: if isVendor() && 
+        resource.data.products.hasAny([request.auth.uid]) &&
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status', 'tracking', 'timeline', 'updatedAt']) &&
+        request.resource.data.status in ['processing', 'shipped', 'delivered'];
+      
+      // Admins can manage all orders
+      allow read, write: if isAdmin();
+    }
+    
+    // Promotions collection
+    match /promotions/{promoId} {
+      // Anyone can read active promotions
+      allow read: if resource.data.isActive == true;
+      
+      // Admins can read all promotions
+      allow read: if isAdmin();
+      
+      // Vendors can read their own promotions
+      allow read: if isVendor() && resource.data.createdBy == request.auth.uid;
+      
+      // Admins can create and manage all promotions
+      allow write: if isAdmin();
+      
+      // Vendors can create promotions for their products
+      allow create: if isVendor() && 
+        request.resource.data.createdBy == request.auth.uid &&
+        (!('vendorRestriction' in request.resource.data) || 
+         request.resource.data.vendorRestriction == request.auth.uid);
+      
+      // Vendors can update their own promotions
+      allow update: if isVendor() && 
+        resource.data.createdBy == request.auth.uid &&
+        request.resource.data.createdBy == request.auth.uid;
+    }
+    
+    // Shopping cart collection (subcollection of users)
+    match /users/{userId}/cart/{itemId} {
+      allow read, write: if isOwner(userId);
+    }
+    
+    // Wishlist collection (subcollection of users)
+    match /users/{userId}/wishlist/{itemId} {
+      allow read, write: if isOwner(userId);
+    }
+    
+    // Analytics collection - admin only
+    match /analytics/{docId} {
+      allow read, write: if isAdmin();
+    }
+    
+    // System settings - admin only
+    match /settings/{settingId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+    
+    // Notifications collection
+    match /notifications/{notificationId} {
+      // Users can read their own notifications
+      allow read: if isAuthenticated() && resource.data.userId == request.auth.uid;
+      
+      // Users can mark their notifications as read
+      allow update: if isAuthenticated() && 
+        resource.data.userId == request.auth.uid &&
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['read', 'readAt']);
+      
+      // System can create notifications (via Cloud Functions)
+      allow create: if isAdmin();
+    }
+    
+    // Build gallery collection (user-generated content)
+    match /builds/{buildId} {
+      // Anyone can read public builds
+      allow read: if resource.data.visibility == 'public';
+      
+      // Users can read their own builds
+      allow read: if isAuthenticated() && resource.data.userId == request.auth.uid;
+      
+      // Users can create and manage their own builds
+      allow create, update: if isAuthenticated() && 
+        request.resource.data.userId == request.auth.uid;
+      
+      // Users can delete their own builds
+      allow delete: if isAuthenticated() && resource.data.userId == request.auth.uid;
+      
+      // Admins can manage all builds
+      allow read, write: if isAdmin();
+    }
+  }
+}

@@ -1,0 +1,362 @@
+{
+  "parts": {
+    "part1_turbo_kit": {
+      "name": "Garrett GT2860RS Turbo Kit",
+      "category": "engine",
+      "subcategory": "turbo",
+      "description": "High-performance turbo kit with ball bearing technology for maximum response and reliability. Includes all necessary hardware and gaskets.",
+      "compatibleCars": [
+        {
+          "brand": "BMW",
+          "model": "M3",
+          "yearRange": {
+            "start": 2014,
+            "end": 2023
+          },
+          "engineType": "3.0L Twin Turbo I6",
+          "trim": ["Competition", "Base"],
+          "optionalRequirements": ["ECU tune required"]
+        },
+        {
+          "brand": "Toyota",
+          "model": "Supra",
+          "yearRange": {
+            "start": 2020,
+            "end": 2024
+          },
+          "engineType": "3.0L Twin Turbo I6",
+          "trim": ["3.0", "3.0 Premium"],
+          "optionalRequirements": ["ECU tune required"]
+        }
+      ],
+      "price": 3299.99,
+      "currency": "USD",
+      "stock": 15,
+      "vendorId": "vendor1_demo",
+      "mediaUrls": {
+        "images": [
+          "https://storage.googleapis.com/boostlab-assets/parts/turbo-kit/main.jpg",
+          "https://storage.googleapis.com/boostlab-assets/parts/turbo-kit/detail1.jpg",
+          "https://storage.googleapis.com/boostlab-assets/parts/turbo-kit/detail2.jpg"
+        ],
+        "videos": [
+          "https://storage.googleapis.com/boostlab-assets/parts/turbo-kit/install-guide.mp4"
+        ],
+        "model3D": [
+          "https://storage.googleapis.com/boostlab-assets/parts/turbo-kit/model.glb"
+        ]
+      },
+      "tags": ["performance", "turbo", "premium", "track"],
+      "ratings": {
+        "average": 4.7,
+        "count": 89
+      },
+      "specifications": {
+        "material": "Cast iron turbine housing",
+        "bearingType": "Ball bearing",
+        "maxBoost": "25 PSI",
+        "powerGain": "150-200 HP",
+        "warranty": "2 years"
+      },
+      "installationDifficulty": "expert",
+      "estimatedInstallTime": "8-12 hours",
+      "createdAt": "2024-01-10T14:30:00Z",
+      "updatedAt": "2024-01-15T09:20:00Z"
+    },
+    "part2_cold_air_intake": {
+      "name": "K&N Performance Cold Air Intake",
+      "category": "engine",
+      "subcategory": "intake",
+      "description": "High-flow cold air intake system with washable filter. Increases airflow and engine sound while maintaining filtration efficiency.",
+      "compatibleCars": [
+        {
+          "brand": "Honda",
+          "model": "Civic Type R",
+          "yearRange": {
+            "start": 2017,
+            "end": 2024
+          },
+          "engineType": "2.0L Turbo I4",
+          "trim": ["Base", "Limited Edition"],
+          "optionalRequirements": []
+        },
+        {
+          "brand": "Ford",
+          "model": "Mustang GT",
+          "yearRange": {
+            "start": 2018,
+            "end": 2024
+          },
+          "engineType": "5.0L V8",
+          "trim": ["Base", "Premium"],
+          "optionalRequirements": []
+        }
+      ],
+      "price": 349.99,
+      "currency": "USD",
+      "stock": 42,
+      "vendorId": "vendor1_demo",
+      "mediaUrls": {
+        "images": [
+          "https://storage.googleapis.com/boostlab-assets/parts/cold-air-intake/main.jpg",
+          "https://storage.googleapis.com/boostlab-assets/parts/cold-air-intake/installed.jpg"
+        ],
+        "videos": [
+          "https://storage.googleapis.com/boostlab-assets/parts/cold-air-intake/sound-test.mp4"
+        ],
+        "model3D": [
+          "https://storage.googleapis.com/boostlab-assets/parts/cold-air-intake/model.glb"
+        ]
+      },
+      "tags": ["performance", "intake", "sound", "easy-install"],
+      "ratings": {
+        "average": 4.5,
+        "count": 156
+      },
+      "specifications": {
+        "filterType": "Washable cotton gauze",
+        "material": "Aluminum",
+        "powerGain": "10-15 HP",
+        "warranty": "Million mile limited warranty"
+      },
+      "installationDifficulty": "intermediate",
+      "estimatedInstallTime": "1-2 hours",
+      "createdAt": "2024-01-08T11:15:00Z",
+      "updatedAt": "2024-01-12T16:45:00Z"
+    },
+    "part3_exhaust_system": {
+      "name": "Borla ATAK Cat-Back Exhaust",
+      "category": "engine",
+      "subcategory": "exhaust",
+      "description": "Aggressive sound exhaust system with patented straight-through design. Delivers maximum performance and unmistakable BORLA sound.",
+      "compatibleCars": [
+        {
+          "brand": "Ford",
+          "model": "Mustang GT",
+          "yearRange": {
+            "start": 2018,
+            "end": 2024
+          },
+          "engineType": "5.0L V8",
+          "trim": ["Base", "Premium"],
+          "optionalRequirements": []
+        },
+        {
+          "brand": "BMW",
+          "model": "M3",
+          "yearRange": {
+            "start": 2014,
+            "end": 2023
+          },
+          "engineType": "3.0L Twin Turbo I6",
+          "trim": ["Competition", "Base"],
+          "optionalRequirements": []
+        }
+      ],
+      "price": 1299.99,
+      "currency": "USD",
+      "stock": 8,
+      "vendorId": "vendor1_demo",
+      "mediaUrls": {
+        "images": [
+          "https://storage.googleapis.com/boostlab-assets/parts/exhaust/main.jpg",
+          "https://storage.googleapis.com/boostlab-assets/parts/exhaust/tips.jpg"
+        ],
+        "videos": [
+          "https://storage.googleapis.com/boostlab-assets/parts/exhaust/sound-comparison.mp4"
+        ],
+        "model3D": [
+          "https://storage.googleapis.com/boostlab-assets/parts/exhaust/model.glb"
+        ]
+      },
+      "tags": ["performance", "sound", "exhaust", "aggressive"],
+      "ratings": {
+        "average": 4.8,
+        "count": 203
+      },
+      "specifications": {
+        "material": "T-304 stainless steel",
+        "tipSize": "4.25 inch",
+        "powerGain": "15-20 HP",
+        "warranty": "Million mile warranty"
+      },
+      "installationDifficulty": "intermediate",
+      "estimatedInstallTime": "2-3 hours",
+      "createdAt": "2024-01-05T13:20:00Z",
+      "updatedAt": "2024-01-18T10:30:00Z"
+    },
+    "part4_coilovers": {
+      "name": "BC Racing BR Series Coilovers",
+      "category": "suspension",
+      "subcategory": "coilovers",
+      "description": "Fully adjustable coilover suspension system with 30-way dampening adjustment. Perfect for street and track use.",
+      "compatibleCars": [
+        {
+          "brand": "Honda",
+          "model": "Civic Type R",
+          "yearRange": {
+            "start": 2017,
+            "end": 2024
+          },
+          "engineType": "2.0L Turbo I4",
+          "trim": ["Base", "Limited Edition"],
+          "optionalRequirements": []
+        },
+        {
+          "brand": "Subaru",
+          "model": "WRX STI",
+          "yearRange": {
+            "start": 2015,
+            "end": 2021
+          },
+          "engineType": "2.5L Turbo H4",
+          "trim": ["Base", "Limited"],
+          "optionalRequirements": []
+        }
+      ],
+      "price": 1199.99,
+      "currency": "USD",
+      "stock": 12,
+      "vendorId": "vendor1_demo",
+      "mediaUrls": {
+        "images": [
+          "https://storage.googleapis.com/boostlab-assets/parts/coilovers/main.jpg",
+          "https://storage.googleapis.com/boostlab-assets/parts/coilovers/adjustment.jpg"
+        ],
+        "videos": [
+          "https://storage.googleapis.com/boostlab-assets/parts/coilovers/install-guide.mp4"
+        ],
+        "model3D": [
+          "https://storage.googleapis.com/boostlab-assets/parts/coilovers/model.glb"
+        ]
+      },
+      "tags": ["suspension", "adjustable", "track", "handling"],
+      "ratings": {
+        "average": 4.6,
+        "count": 127
+      },
+      "specifications": {
+        "springRate": "8K/6K",
+        "dampingAdjustment": "30-way",
+        "dropRange": "1-3 inches",
+        "warranty": "1 year"
+      },
+      "installationDifficulty": "expert",
+      "estimatedInstallTime": "4-6 hours",
+      "createdAt": "2024-01-03T09:45:00Z",
+      "updatedAt": "2024-01-14T14:15:00Z"
+    },
+    "part5_body_kit": {
+      "name": "Rocket Bunny V2 Wide Body Kit",
+      "category": "body",
+      "subcategory": "body_kit",
+      "description": "Complete wide body kit with aggressive styling. Includes front bumper, rear bumper, side skirts, and fender flares.",
+      "compatibleCars": [
+        {
+          "brand": "Toyota",
+          "model": "Supra",
+          "yearRange": {
+            "start": 2020,
+            "end": 2024
+          },
+          "engineType": "3.0L Twin Turbo I6",
+          "trim": ["3.0", "3.0 Premium"],
+          "optionalRequirements": ["Professional installation recommended"]
+        }
+      ],
+      "price": 4999.99,
+      "currency": "USD",
+      "stock": 3,
+      "vendorId": "vendor1_demo",
+      "mediaUrls": {
+        "images": [
+          "https://storage.googleapis.com/boostlab-assets/parts/body-kit/main.jpg",
+          "https://storage.googleapis.com/boostlab-assets/parts/body-kit/front.jpg",
+          "https://storage.googleapis.com/boostlab-assets/parts/body-kit/rear.jpg"
+        ],
+        "videos": [
+          "https://storage.googleapis.com/boostlab-assets/parts/body-kit/showcase.mp4"
+        ],
+        "model3D": [
+          "https://storage.googleapis.com/boostlab-assets/parts/body-kit/model.glb"
+        ]
+      },
+      "tags": ["cosmetic", "wide-body", "aggressive", "premium"],
+      "ratings": {
+        "average": 4.9,
+        "count": 45
+      },
+      "specifications": {
+        "material": "FRP (Fiberglass Reinforced Plastic)",
+        "pieces": "8-piece kit",
+        "widthIncrease": "3.5 inches per side",
+        "warranty": "6 months"
+      },
+      "installationDifficulty": "expert",
+      "estimatedInstallTime": "16-24 hours",
+      "createdAt": "2023-12-28T16:00:00Z",
+      "updatedAt": "2024-01-10T11:30:00Z"
+    },
+    "part6_brake_kit": {
+      "name": "Brembo GT Big Brake Kit",
+      "category": "brakes",
+      "subcategory": "brake_kit",
+      "description": "High-performance big brake kit with 6-piston calipers and slotted rotors. Dramatically improves stopping power and fade resistance.",
+      "compatibleCars": [
+        {
+          "brand": "BMW",
+          "model": "M3",
+          "yearRange": {
+            "start": 2014,
+            "end": 2023
+          },
+          "engineType": "3.0L Twin Turbo I6",
+          "trim": ["Competition", "Base"],
+          "optionalRequirements": []
+        },
+        {
+          "brand": "Nissan",
+          "model": "GT-R",
+          "yearRange": {
+            "start": 2017,
+            "end": 2024
+          },
+          "engineType": "3.8L Twin Turbo V6",
+          "trim": ["Premium", "Track Edition"],
+          "optionalRequirements": []
+        }
+      ],
+      "price": 2799.99,
+      "currency": "USD",
+      "stock": 6,
+      "vendorId": "vendor1_demo",
+      "mediaUrls": {
+        "images": [
+          "https://storage.googleapis.com/boostlab-assets/parts/brake-kit/main.jpg",
+          "https://storage.googleapis.com/boostlab-assets/parts/brake-kit/caliper.jpg"
+        ],
+        "videos": [
+          "https://storage.googleapis.com/boostlab-assets/parts/brake-kit/performance-test.mp4"
+        ],
+        "model3D": [
+          "https://storage.googleapis.com/boostlab-assets/parts/brake-kit/model.glb"
+        ]
+      },
+      "tags": ["brakes", "performance", "track", "premium"],
+      "ratings": {
+        "average": 4.8,
+        "count": 78
+      },
+      "specifications": {
+        "rotorSize": "380mm front / 350mm rear",
+        "pistonCount": "6-piston front / 4-piston rear",
+        "material": "Two-piece floating rotors",
+        "warranty": "2 years"
+      },
+      "installationDifficulty": "expert",
+      "estimatedInstallTime": "6-8 hours",
+      "createdAt": "2024-01-02T12:00:00Z",
+      "updatedAt": "2024-01-16T15:45:00Z"
+    }
+  }
+}
