@@ -1,0 +1,45 @@
+{
+  "name": "boostlab-functions",
+  "version": "1.0.0",
+  "description": "Firebase Cloud Functions for BoostLab car tuning webshop",
+  "main": "index.js",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "build": "echo 'No build step required'",
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "dependencies": {
+    "firebase-admin": "^12.0.0",
+    "firebase-functions": "^4.8.0",
+    "stripe": "^14.0.0",
+    "nodemailer": "^6.9.0",
+    "axios": "^1.6.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0",
+    "jest": "^29.7.0"
+  },
+  "private": true,
+  "keywords": [
+    "firebase",
+    "cloud-functions",
+    "car-tuning",
+    "e-commerce",
+    "automotive"
+  ],
+  "author": "BoostLab Team",
+  "license": "MIT"
+}

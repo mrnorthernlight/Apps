@@ -1,0 +1,139 @@
+{
+  "promotions": {
+    "promo1_newuser": {
+      "code": "NEWUSER10",
+      "name": "New User Welcome",
+      "description": "10% off your first order",
+      "discountType": "percentage",
+      "discountValue": 10,
+      "minOrderAmount": 100,
+      "maxDiscountAmount": 500,
+      "applicableCategories": ["engine", "suspension", "brakes", "body", "interior", "lighting"],
+      "excludedProducts": [],
+      "usageLimit": 1,
+      "usageCount": 0,
+      "userRestrictions": {
+        "newUsersOnly": true,
+        "maxUsesPerUser": 1
+      },
+      "startDate": "2024-01-01T00:00:00Z",
+      "expirationDate": "2024-12-31T23:59:59Z",
+      "isActive": true,
+      "createdBy": "admin1_demo",
+      "createdAt": "2024-01-01T00:00:00Z"
+    },
+    "promo2_turbo": {
+      "code": "TURBO20",
+      "name": "Turbo Tuesday",
+      "description": "20% off all turbo kits and related parts",
+      "discountType": "percentage",
+      "discountValue": 20,
+      "minOrderAmount": 500,
+      "maxDiscountAmount": 1000,
+      "applicableCategories": ["engine"],
+      "applicableTags": ["turbo", "performance"],
+      "excludedProducts": [],
+      "usageLimit": 100,
+      "usageCount": 23,
+      "userRestrictions": {
+        "newUsersOnly": false,
+        "maxUsesPerUser": 2
+      },
+      "startDate": "2024-01-15T00:00:00Z",
+      "expirationDate": "2024-02-15T23:59:59Z",
+      "isActive": true,
+      "createdBy": "admin1_demo",
+      "createdAt": "2024-01-10T12:00:00Z"
+    },
+    "promo3_freeship": {
+      "code": "FREESHIP",
+      "name": "Free Shipping",
+      "description": "Free shipping on orders over $200",
+      "discountType": "shipping",
+      "discountValue": 100,
+      "minOrderAmount": 200,
+      "maxDiscountAmount": 100,
+      "applicableCategories": ["engine", "suspension", "brakes", "body", "interior", "lighting"],
+      "excludedProducts": [],
+      "usageLimit": null,
+      "usageCount": 156,
+      "userRestrictions": {
+        "newUsersOnly": false,
+        "maxUsesPerUser": null
+      },
+      "startDate": "2024-01-01T00:00:00Z",
+      "expirationDate": "2024-06-30T23:59:59Z",
+      "isActive": true,
+      "createdBy": "admin1_demo",
+      "createdAt": "2023-12-20T10:00:00Z"
+    },
+    "promo4_bmw": {
+      "code": "BMW15",
+      "name": "BMW Parts Special",
+      "description": "15% off BMW compatible parts",
+      "discountType": "percentage",
+      "discountValue": 15,
+      "minOrderAmount": 300,
+      "maxDiscountAmount": 750,
+      "applicableCategories": ["engine", "suspension", "brakes"],
+      "compatibleBrands": ["BMW"],
+      "excludedProducts": [],
+      "usageLimit": 50,
+      "usageCount": 12,
+      "userRestrictions": {
+        "newUsersOnly": false,
+        "maxUsesPerUser": 1
+      },
+      "startDate": "2024-01-20T00:00:00Z",
+      "expirationDate": "2024-03-20T23:59:59Z",
+      "isActive": true,
+      "createdBy": "admin1_demo",
+      "createdAt": "2024-01-15T14:30:00Z"
+    },
+    "promo5_expired": {
+      "code": "HOLIDAY25",
+      "name": "Holiday Sale",
+      "description": "25% off everything - Holiday Special",
+      "discountType": "percentage",
+      "discountValue": 25,
+      "minOrderAmount": 150,
+      "maxDiscountAmount": 2000,
+      "applicableCategories": ["engine", "suspension", "brakes", "body", "interior", "lighting"],
+      "excludedProducts": [],
+      "usageLimit": 200,
+      "usageCount": 187,
+      "userRestrictions": {
+        "newUsersOnly": false,
+        "maxUsesPerUser": 3
+      },
+      "startDate": "2023-12-01T00:00:00Z",
+      "expirationDate": "2024-01-05T23:59:59Z",
+      "isActive": false,
+      "createdBy": "admin1_demo",
+      "createdAt": "2023-11-25T09:00:00Z"
+    },
+    "promo6_vendor": {
+      "code": "TURBOTECH10",
+      "name": "TurboTech Vendor Special",
+      "description": "10% off all TurboTech products",
+      "discountType": "percentage",
+      "discountValue": 10,
+      "minOrderAmount": 200,
+      "maxDiscountAmount": 300,
+      "applicableCategories": ["engine", "suspension", "brakes"],
+      "vendorRestriction": "vendor1_demo",
+      "excludedProducts": [],
+      "usageLimit": 75,
+      "usageCount": 34,
+      "userRestrictions": {
+        "newUsersOnly": false,
+        "maxUsesPerUser": 2
+      },
+      "startDate": "2024-01-10T00:00:00Z",
+      "expirationDate": "2024-04-10T23:59:59Z",
+      "isActive": true,
+      "createdBy": "vendor1_demo",
+      "createdAt": "2024-01-08T16:20:00Z"
+    }
+  }
+}

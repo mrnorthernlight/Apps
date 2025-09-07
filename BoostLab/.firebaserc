@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "default": "boostlab-car-tuning"
+  },
+  "targets": {
+    "boostlab-car-tuning": {
+      "hosting": {
+        "web": [
+          "boostlab-web"
+        ]
+      }
+    }
+  },
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}

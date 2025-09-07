@@ -1,0 +1,115 @@
+{
+  "reviews": {
+    "review1_turbo_kit": {
+      "userId": "user1_demo",
+      "productId": "part1_turbo_kit",
+      "rating": 5,
+      "comment": "Absolutely incredible turbo kit! The power gains are exactly as advertised. Installation was challenging but the instructions were clear. The sound is amazing and the response is instant. Worth every penny!",
+      "mediaUrls": [
+        "https://storage.googleapis.com/boostlab-assets/reviews/review1/dyno-chart.jpg",
+        "https://storage.googleapis.com/boostlab-assets/reviews/review1/installed.jpg"
+      ],
+      "timestamp": "2024-01-20T15:30:00Z",
+      "verified": true,
+      "helpful": 23,
+      "carInfo": {
+        "brand": "BMW",
+        "model": "M3",
+        "year": 2020,
+        "trim": "Competition"
+      }
+    },
+    "review2_intake": {
+      "userId": "user1_demo",
+      "productId": "part2_cold_air_intake",
+      "rating": 4,
+      "comment": "Great intake system with noticeable sound improvement. Installation was straightforward and took about 90 minutes. The power gains are modest but the sound is fantastic. Quality construction.",
+      "mediaUrls": [
+        "https://storage.googleapis.com/boostlab-assets/reviews/review2/sound-clip.mp4"
+      ],
+      "timestamp": "2024-01-18T12:45:00Z",
+      "verified": true,
+      "helpful": 15,
+      "carInfo": {
+        "brand": "Honda",
+        "model": "Civic Type R",
+        "year": 2022,
+        "trim": "Limited Edition"
+      }
+    },
+    "review3_exhaust": {
+      "userId": "user1_demo",
+      "productId": "part3_exhaust_system",
+      "rating": 5,
+      "comment": "This exhaust system is LOUD and I love it! The ATAK sound is exactly what I wanted. Quality is top-notch and the tips look amazing. Installation was easier than expected.",
+      "mediaUrls": [
+        "https://storage.googleapis.com/boostlab-assets/reviews/review3/sound-comparison.mp4",
+        "https://storage.googleapis.com/boostlab-assets/reviews/review3/tips-closeup.jpg"
+      ],
+      "timestamp": "2024-01-16T09:20:00Z",
+      "verified": true,
+      "helpful": 31,
+      "carInfo": {
+        "brand": "Ford",
+        "model": "Mustang GT",
+        "year": 2022,
+        "trim": "Premium"
+      }
+    },
+    "review4_coilovers": {
+      "userId": "user1_demo",
+      "productId": "part4_coilovers",
+      "rating": 4,
+      "comment": "Excellent coilovers for the price. The adjustability is great and the ride quality is surprisingly good for track-focused suspension. Installation requires some experience but the results are worth it.",
+      "mediaUrls": [
+        "https://storage.googleapis.com/boostlab-assets/reviews/review4/before-after.jpg"
+      ],
+      "timestamp": "2024-01-14T16:10:00Z",
+      "verified": true,
+      "helpful": 18,
+      "carInfo": {
+        "brand": "Honda",
+        "model": "Civic Type R",
+        "year": 2022,
+        "trim": "Limited Edition"
+      }
+    },
+    "review5_body_kit": {
+      "userId": "user1_demo",
+      "productId": "part5_body_kit",
+      "rating": 5,
+      "comment": "This body kit completely transforms the car! The fitment is excellent and the quality is outstanding. Professional installation is definitely recommended. The aggressive look is exactly what I wanted.",
+      "mediaUrls": [
+        "https://storage.googleapis.com/boostlab-assets/reviews/review5/full-car.jpg",
+        "https://storage.googleapis.com/boostlab-assets/reviews/review5/detail-shots.jpg"
+      ],
+      "timestamp": "2024-01-12T14:25:00Z",
+      "verified": true,
+      "helpful": 42,
+      "carInfo": {
+        "brand": "Toyota",
+        "model": "Supra",
+        "year": 2023,
+        "trim": "3.0 Premium"
+      }
+    },
+    "review6_brake_kit": {
+      "userId": "user1_demo",
+      "productId": "part6_brake_kit",
+      "rating": 5,
+      "comment": "Best brake upgrade I've ever done! The stopping power is incredible and fade resistance is amazing on track days. The Brembo quality is evident in every detail. Expensive but worth it.",
+      "mediaUrls": [
+        "https://storage.googleapis.com/boostlab-assets/reviews/review6/track-test.mp4"
+      ],
+      "timestamp": "2024-01-10T11:15:00Z",
+      "verified": true,
+      "helpful": 27,
+      "carInfo": {
+        "brand": "BMW",
+        "model": "M3",
+        "year": 2020,
+        "trim": "Competition"
+      }
+    }
+  }
+}

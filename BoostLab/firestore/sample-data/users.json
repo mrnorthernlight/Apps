@@ -1,0 +1,109 @@
+{
+  "users": {
+    "user1_demo": {
+      "name": "Alex Rodriguez",
+      "email": "alex@example.com",
+      "role": "user",
+      "createdAt": "2024-01-15T10:30:00Z",
+      "garage": [
+        {
+          "carId": "car1_bmw_m3",
+          "brand": "BMW",
+          "model": "M3",
+          "year": 2020,
+          "engineType": "3.0L Twin Turbo I6",
+          "trim": "Competition",
+          "nickname": "Beast Mode",
+          "addedAt": "2024-01-15T10:30:00Z"
+        },
+        {
+          "carId": "car2_honda_civic",
+          "brand": "Honda",
+          "model": "Civic Type R",
+          "year": 2022,
+          "engineType": "2.0L Turbo I4",
+          "trim": "Limited Edition",
+          "nickname": "Red Rocket",
+          "addedAt": "2024-02-01T14:20:00Z"
+        }
+      ],
+      "wishlist": [
+        "part1_turbo_kit",
+        "part5_coilovers",
+        "part8_exhaust_system"
+      ],
+      "purchaseHistory": [
+        "order1_demo",
+        "order2_demo"
+      ],
+      "preferences": {
+        "currency": "USD",
+        "notifications": {
+          "orderUpdates": true,
+          "promotions": true,
+          "newProducts": false
+        },
+        "showCompatibleOnly": true
+      },
+      "profile": {
+        "avatar": "https://storage.googleapis.com/boostlab-assets/avatars/user1.jpg",
+        "bio": "BMW enthusiast and weekend racer",
+        "location": "Los Angeles, CA",
+        "joinedAt": "2024-01-15T10:30:00Z"
+      }
+    },
+    "vendor1_demo": {
+      "name": "TurboTech Solutions",
+      "email": "contact@turbotech.com",
+      "role": "vendor",
+      "createdAt": "2023-12-01T09:00:00Z",
+      "companyInfo": {
+        "businessName": "TurboTech Solutions LLC",
+        "taxId": "12-3456789",
+        "address": {
+          "street": "1234 Performance Blvd",
+          "city": "Detroit",
+          "state": "MI",
+          "zipCode": "48201",
+          "country": "USA"
+        },
+        "phone": "+1-555-TURBO-1",
+        "website": "https://turbotech.com"
+      },
+      "vendorStats": {
+        "totalProducts": 45,
+        "totalSales": 1250,
+        "rating": 4.8,
+        "reviewCount": 234,
+        "joinedAt": "2023-12-01T09:00:00Z"
+      },
+      "bankingInfo": {
+        "accountHolder": "TurboTech Solutions LLC",
+        "routingNumber": "123456789",
+        "accountNumber": "****1234"
+      },
+      "isVerified": true,
+      "verificationDate": "2023-12-15T16:30:00Z"
+    },
+    "admin1_demo": {
+      "name": "Sarah Chen",
+      "email": "admin@boostlab.com",
+      "role": "admin",
+      "createdAt": "2023-11-01T08:00:00Z",
+      "adminPermissions": [
+        "user_management",
+        "vendor_approval",
+        "product_moderation",
+        "order_management",
+        "analytics_access",
+        "system_settings"
+      ],
+      "lastLogin": "2024-01-20T09:15:00Z",
+      "profile": {
+        "avatar": "https://storage.googleapis.com/boostlab-assets/avatars/admin1.jpg",
+        "department": "Operations",
+        "employeeId": "BL001"
+      }
+    }
+  }
+}
