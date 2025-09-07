@@ -50,13 +50,20 @@ rupture/
 
 3. **Start development servers**:
    ```bash
-   npm run dev  # Starts both backend and web
+   npm run dev  # Starts both backend (port 3001) and web app (port 3000)
    ```
 
-4. **For mobile development**:
+4. **Individual services**:
    ```bash
-   npm run mobile
+   npm run backend  # Backend API only
+   npm run web      # Web app only
+   npm run mobile   # Mobile app (coming soon)
    ```
+
+5. **Access the application**:
+   - **Web App**: http://localhost:3000
+   - **API**: http://localhost:3001
+   - **API Docs**: http://localhost:3001/api/docs
 
 ## Setup Instructions 📋
 

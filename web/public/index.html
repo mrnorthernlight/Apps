@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/rupture-logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#121212" />
+    <meta name="description" content="Rupture - Lightning-fast chat application" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/rupture-logo.svg" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Rupture - Lightning Chat</title>
+    <style>
+      /* Prevent flash of unstyled content */
+      body {
+        margin: 0;
+        background-color: #121212;
+        color: #EDEDED;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      /* Loading screen */
+      #loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #121212;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+      
+      .loading-logo {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 20px;
+        animation: pulse 2s infinite;
+      }
+      
+      .loading-text {
+        color: #EDEDED;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      
+      .loading-subtitle {
+        color: #9CA3AF;
+        font-size: 16px;
+      }
+      
+      @keyframes pulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.8; transform: scale(1.05); }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+      <svg class="loading-logo" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="200" cy="200" r="180" fill="none" stroke="#4A5568" stroke-width="20"/>
+        <path d="M160 80 L240 80 L180 200 L220 200 L140 320 L200 180 L160 180 Z" 
+              fill="#F6AD55" 
+              stroke="#ED8936" 
+              stroke-width="2"/>
+      </svg>
+      <div class="loading-text">Rupture</div>
+      <div class="loading-subtitle">Lightning-fast chat</div>
+    </div>
+    
+    <div id="root"></div>
+    
+    <script>
+      // Hide loading screen when React app loads
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          const loadingScreen = document.getElementById('loading-screen');
+          if (loadingScreen) {
+            loadingScreen.style.opacity = '0';
+            loadingScreen.style.transition = 'opacity 0.5s ease-out';
+            setTimeout(() => loadingScreen.remove(), 500);
+          }
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
+
