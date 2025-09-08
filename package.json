@@ -1,0 +1,50 @@
+{
+  "name": "fambase",
+  "version": "1.0.0",
+  "description": "Complete WhatsApp clone with end-to-end encryption",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "type-check": "turbo run type-check",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "prettier": "^3.0.3",
+    "turbo": "^1.10.16",
+    "typescript": "^5.1.6"
+  },
+  "packageManager": "pnpm@8.6.12",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/fambase.git"
+  },
+  "keywords": [
+    "whatsapp",
+    "messaging",
+    "encryption",
+    "react",
+    "react-native",
+    "nextjs",
+    "supabase",
+    "signal-protocol"
+  ],
+  "author": "FamBase Team",
+  "license": "MIT"
+}
+

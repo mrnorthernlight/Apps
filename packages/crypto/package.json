@@ -1,0 +1,24 @@
+{
+  "name": "@fambase/crypto",
+  "version": "1.0.0",
+  "description": "End-to-end encryption implementation for FamBase",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fambase/shared": "workspace:*",
+    "@privacyresearch/libsignal-protocol-typescript": "^0.0.10",
+    "tweetnacl": "^1.0.3",
+    "tweetnacl-util": "^0.15.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.0",
+    "typescript": "^5.1.6"
+  }
+}
+
