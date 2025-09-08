@@ -1,0 +1,21 @@
+{
+  "name": "@fambase/shared",
+  "version": "1.0.0",
+  "description": "Shared utilities and types for FamBase",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.38.0",
+    "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}
+
